@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
 import com.example.tokocase.R
 import com.example.tokocase.adapter.AdapterSlider
+import com.example.tokocase.model.Produk
 import java.util.zip.Inflater
 
 // TODO: Rename parameter arguments, choose names that match
@@ -49,7 +50,37 @@ class HomeFragment : Fragment() {
 
         val adapterSlider = AdapterSlider(arrSlider, activity)
         vpSlider.adapter = adapterSlider
+
+
         return view
+    }
+    val arrProduk: ArrayList<Produk>get(){
+        val arr = ArrayList<Produk>()
+        val p1 = Produk()
+        p1.nama = "Samsung"
+        p1.harga = "30.000"
+        p1.gambar =R.drawable.case1
+
+        val p2 = Produk()
+           p2.nama = "Oppo"
+           p2.harga = "Rp.15.000"
+           p2.gambar = R.drawable.case2
+        val p3 = Produk()
+
+        p3.nama = "Vivo"
+        p3.harga = "Rp.20.000"
+        p3.gambar = R.drawable.case3
+
+       val p4 = Produk()
+        p4.nama = "Xiaomi"
+        p4.harga = "Rp.40.000"
+       p4.gambar = R.drawable.case4
+
+       arr.add(p1)
+       arr.add(p2)
+       arr.add(p3)
+       arr.add(p4)
+        return arr
     }
 
     companion object {
