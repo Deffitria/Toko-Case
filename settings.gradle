@@ -1,0 +1,2 @@
+rootProject.name = "Toko Case"
+include ':app'
